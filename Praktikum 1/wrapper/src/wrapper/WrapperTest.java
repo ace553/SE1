@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class WrapperTest {
+public class  {
     private MockSensor _sensor;
     private ISensor _wrapper;
 
@@ -15,7 +15,7 @@ public class WrapperTest {
 
     @Test
     //tests für d == 4, 1<=x<=4
-    public void id0() throws Exception{
+    public void id0() {
         //unterer Grenzwert
         _sensor.setTestValue(1);
         assertEquals(4, _wrapper.getDistance());
@@ -31,7 +31,7 @@ public class WrapperTest {
 
     @Test
     //tests für d == 5, 5<=x<=7
-    public void id1() throws Exception{
+    public void id1() {
         //unterer Grenzwert
         _sensor.setTestValue(5);
         assertEquals(5, _wrapper.getDistance());
@@ -47,7 +47,7 @@ public class WrapperTest {
 
     @Test
     //tests für d == 6, 8<=x<=12
-    public void id2() throws Exception{
+    public void id2() {
         //unterer Grenzwert
         _sensor.setTestValue(8);
         assertEquals(6, _wrapper.getDistance());
@@ -63,7 +63,7 @@ public class WrapperTest {
 
     @Test
     //tests für d == 7, 13<=x<=17
-    public void id3() throws Exception{
+    public void id3() {
         //unterer Grenzwert
         _sensor.setTestValue(13);
         assertEquals(7, _wrapper.getDistance());
@@ -79,7 +79,7 @@ public class WrapperTest {
 
     @Test
     //tests für d == 8, 18<=x<=23
-    public void id4() throws Exception{
+    public void id4() {
         //unterer Grenzwert
         _sensor.setTestValue(18);
         assertEquals(8, _wrapper.getDistance());
@@ -95,7 +95,7 @@ public class WrapperTest {
 
     @Test
     //tests für d == 9, 24<=x<=30
-    public void id5() throws Exception{
+    public void id5() {
         //unterer Grenzwert
         _sensor.setTestValue(24);
         assertEquals(9, _wrapper.getDistance());
@@ -111,7 +111,7 @@ public class WrapperTest {
 
     @Test
     //tests für d == 10, 31<=x<=37
-    public void id6() throws Exception{
+    public void id6() {
         //unterer Grenzwert
         _sensor.setTestValue(31);
         assertEquals(10, _wrapper.getDistance());
@@ -127,7 +127,7 @@ public class WrapperTest {
 
     @Test
     //tests für d == 11, 38<=x<=45
-    public void id7() throws Exception{
+    public void id7(){
         //unterer Grenzwert
         _sensor.setTestValue(38);
         assertEquals(11, _wrapper.getDistance());
@@ -143,7 +143,7 @@ public class WrapperTest {
 
     @Test
     //tests für d == 12, 46<=x<=54
-    public void id8() throws Exception{
+    public void id8() {
         //unterer Grenzwert
         _sensor.setTestValue(46);
         assertEquals(12, _wrapper.getDistance());
@@ -159,7 +159,7 @@ public class WrapperTest {
 
     @Test
     //tests für d == 13, 55<=x<=63
-    public void id9() throws Exception{
+    public void id9() {
         //unterer Grenzwert
         _sensor.setTestValue(55);
         assertEquals(13, _wrapper.getDistance());
@@ -175,7 +175,7 @@ public class WrapperTest {
 
     @Test
     //tests für d == 14, 64<=x<=72
-    public void id10() throws Exception{
+    public void id10() {
         //unterer Grenzwert
         _sensor.setTestValue(64);
         assertEquals(14, _wrapper.getDistance());
@@ -191,7 +191,7 @@ public class WrapperTest {
 
     @Test
     //tests für d == 15, 73<=x<=82
-    public void id11() throws Exception{
+    public void id11() {
         //unterer Grenzwert
         _sensor.setTestValue(73);
         assertEquals(15, _wrapper.getDistance());
@@ -207,7 +207,7 @@ public class WrapperTest {
 
     @Test
     //tests für d == 16, 83<=x<=93
-    public void id12() throws Exception{
+    public void id12() {
         //unterer Grenzwert
         _sensor.setTestValue(83);
         assertEquals(16, _wrapper.getDistance());
@@ -223,7 +223,7 @@ public class WrapperTest {
 
     @Test
     //tests für d == 17, 94<=x<=104
-    public void id13() throws Exception{
+    public void id13() {
         //unterer Grenzwert
         _sensor.setTestValue(94);
         assertEquals(17, _wrapper.getDistance());
@@ -239,7 +239,7 @@ public class WrapperTest {
 
     @Test
     //tests für d == 18, 105<=x<=115
-    public void id14() throws Exception{
+    public void id14() {
         //unterer Grenzwert
         _sensor.setTestValue(105);
         assertEquals(18, _wrapper.getDistance());
@@ -255,7 +255,7 @@ public class WrapperTest {
 
     @Test
     //tests für d == 19, 116<=x<=127
-    public void id15() throws Exception{
+    public void id15() {
         //unterer Grenzwert
         _sensor.setTestValue(116);
         assertEquals(19, _wrapper.getDistance());
@@ -271,7 +271,7 @@ public class WrapperTest {
 
     @Test
     //tests für d == 20, 128<=x<=139
-    public void id16() throws Exception{
+    public void id16(){
         //unterer Grenzwert
         _sensor.setTestValue(128);
         assertEquals(20, _wrapper.getDistance());
@@ -287,7 +287,7 @@ public class WrapperTest {
 
     @Test
     //tests für d == 21, 140<=x<=152
-    public void id17() throws Exception{
+    public void id17() {
         //unterer Grenzwert
         _sensor.setTestValue(140);
         assertEquals(21, _wrapper.getDistance());
@@ -303,7 +303,7 @@ public class WrapperTest {
 
     @Test
     //tests für d == 22, 153<=x<=165
-    public void id18() throws Exception{
+    public void id18(){
         //unterer Grenzwert
         _sensor.setTestValue(153);
         assertEquals(22, _wrapper.getDistance());
@@ -319,7 +319,7 @@ public class WrapperTest {
 
     @Test
     //tests für d == 23, 166<=x<=178
-    public void id19() throws Exception{
+    public void id19() {
         //unterer Grenzwert
         _sensor.setTestValue(166);
         assertEquals(23, _wrapper.getDistance());
@@ -334,7 +334,7 @@ public class WrapperTest {
     }
 
     //tests für d == 24, 179<=x<=191
-    public void id20() throws Exception{
+    public void id20() {
         //unterer Grenzwert
         _sensor.setTestValue(179);
         assertEquals(24, _wrapper.getDistance());
@@ -349,7 +349,7 @@ public class WrapperTest {
     }
 
     //tests für d == 25, 192<=x<=204
-    public void id21() throws Exception{
+    public void id21() {
         //unterer Grenzwert
         _sensor.setTestValue(192);
         assertEquals(25, _wrapper.getDistance());
@@ -364,7 +364,7 @@ public class WrapperTest {
     }
 
     //tests für d == 26, 205<=x<=218
-    public void id22() throws Exception{
+    public void id22() {
         //unterer Grenzwert
         _sensor.setTestValue(205);
         assertEquals(26, _wrapper.getDistance());
@@ -379,7 +379,7 @@ public class WrapperTest {
     }
 
     //tests für d == 27, 219<=x<=232
-    public void id23() throws Exception{
+    public void id23() {
         //unterer Grenzwert
         _sensor.setTestValue(219);
         assertEquals(27, _wrapper.getDistance());
@@ -394,7 +394,7 @@ public class WrapperTest {
     }
 
     //tests für d == 28, 234<=x<=236
-    public void id24() throws Exception{
+    public void id24() {
         //unterer Grenzwert
         _sensor.setTestValue(234);
         assertEquals(28, _wrapper.getDistance());
@@ -409,7 +409,7 @@ public class WrapperTest {
     }
 
     //tests für d == 29, 237<=x<=260
-    public void id25() throws Exception{
+    public void id25() {
         //unterer Grenzwert
         _sensor.setTestValue(237);
         assertEquals(29, _wrapper.getDistance());
