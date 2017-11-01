@@ -5,6 +5,12 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import static service.DistanceClasses.*;
 
+
+/**
+ * Diese Klasse testet ob die IrDistanceClassificator-Klasse Distanzen größer 0 korrekt, in Abhängigkeit eines Modes,
+ * in EntfernungsEnums übersetzt.
+ * @author MAX
+ */
 public class DistanceClassesTest {
 	private IDistanceClassificator _distanceService;
 
@@ -118,7 +124,5 @@ public class DistanceClassesTest {
 		char m = 'C';
 		DistanceClasses c = OFF;
 		_distanceService.determineDistanceClass(m, 1);
-	
-		
 	}
 }
