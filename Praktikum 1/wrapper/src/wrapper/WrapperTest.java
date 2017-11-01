@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class  {
+public class WrapperTest {
     private MockSensor _sensor;
     private ISensor _wrapper;
 
