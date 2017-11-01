@@ -3,9 +3,19 @@ package wrapper;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+/**
+ * Diese Klasse testet ob die ISensor-Klasse Werte von 0 bis 255 korrekt in einen Abstand in Zentimeter umrechnet.
+ * Eine Äquivalenzklasse für diese Tests setzt sich aus der Menge aller Zahlen von 0 bis 255 zusammen die,
+ * nach der Abstandsberechnungsformel, dem selben Abstand in Zentimetern entsprechen.
+ * Die Äquivalenzklassen wurden mit Hilfe dafür üblicher Test überprüft. (untere Grenze, obere Grenze, Kandidat aus dem Bereich)
+ * @author BCK
+ *
+ */
 public class WrapperTest
 {
+    //MockSensor um dem ISensor vom Test definierte Werte zu liefern
     private MockSensor _sensor;
+    //der zu testende Sensor
     private ISensor    _wrapper;
 
     public WrapperTest()
@@ -16,6 +26,8 @@ public class WrapperTest
 
     @Test
     // tests für d == 4, 1<=x<=4
+    // das heißt, dass die Wrapper-Klasse 4cm ausgeben soll,
+    // falls der gelieferte Sensorwert zwischen 1 und 4 liegt (iniklusive)
     public void id0()
     {
         // unterer Grenzwert
