@@ -8,7 +8,14 @@ package wrapper;
  */
 public class MockSensor implements ISensorAPI{
     private char _testValue;
-
+    
+    private char _dValue;
+    
+    public MockSensor()
+	{
+		_dValue = 0;
+	}
+    
     /**
      * Setzt einen zu erzeugenden Abstandswert, der im Sensor gespeichert wird
      * @param discreteValue bestimmter distanz Wert 0-255
@@ -17,18 +24,13 @@ public class MockSensor implements ISensorAPI{
         _testValue = (char) discreteValue;
     }
 
-    /**
-     * Gibt den aktuell emulierten Messwert zurück
-     * @return Ein Distanzwert zwischen 0 und 255
-     */
+    @Override
     public char d(){
-        return _testValue;
+        return _dValue;
     };
 
-    /**
-     * Macht nichts, aber implementiert dadurch das Interface
-     */
+    @Override
     public void t(){
-
+    	_dValue = _testValue;
     }
 }
