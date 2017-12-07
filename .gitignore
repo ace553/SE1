@@ -8,3 +8,5 @@ out/
 Praktikum 1/~WRL0002.tmp
 *.~vsdx
 *.tmp
+.classpath
+.project
