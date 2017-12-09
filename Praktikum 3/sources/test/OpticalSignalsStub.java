@@ -11,7 +11,7 @@ public class OpticalSignalsStub implements IOpticalSignals {
 	public OpticalSignalsStub()
 	{
 		_lampAOn = false;
-		_lampBOn = true;
+		_lampBOn = false;
 	}
 	
 	

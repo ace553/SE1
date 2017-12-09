@@ -8,7 +8,7 @@ public class GateStub implements IGate {
 	
 	public GateStub()
 	{
-		_open = false;
+		_open = true;
 	}
 	
 	@Override
