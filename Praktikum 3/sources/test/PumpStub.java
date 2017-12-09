@@ -4,22 +4,26 @@ import boundaryclasses.IPump;
 
 public class PumpStub implements IPump {
 
+	boolean _activated;
+	
+	public PumpStub()
+	{
+		_activated = false;
+	}
+	
 	@Override
 	public void sendActivate() {
-		// TODO Auto-generated method stub
-
+		_activated = true;
 	}
 
 	@Override
 	public void sendDeactivate() {
-		// TODO Auto-generated method stub
-
+		_activated = false;
 	}
 
 	@Override
 	public boolean receivedActivated() {
-		// TODO Auto-generated method stub
-		return false;
+		return _activated;
 	}
 
 }
