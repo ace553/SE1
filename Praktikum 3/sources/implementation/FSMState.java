@@ -2,5 +2,5 @@ package implementation;
 
 public enum FSMState {
 	
-	HumidityOkay;
+	Monitoring, Hudmitifying, CloseGate, StartingPumps, PumpError, Dehudmitifying, OpenGate 
 }
