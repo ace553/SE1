@@ -42,6 +42,7 @@ public class FSMImplementationTest
 	@Test
 	public void testPath()
 	{
+		//Monitoring
 		assertEquals(false, pumpA._activated);
 		assertEquals(false, pumpB._activated);
 		assertEquals(true, gate._open);
@@ -55,6 +56,7 @@ public class FSMImplementationTest
 
 		uut.evaluate();
 
+		//Monitoring
 		assertEquals(false, pumpA._activated);
 		assertEquals(false, pumpB._activated);
 		assertEquals(true, gate._open);
@@ -69,7 +71,8 @@ public class FSMImplementationTest
 		sensor._humidity = 70;
 
 		uut.evaluate();
-
+		
+		//CloseGate
 		assertEquals(false, pumpA._activated);
 		assertEquals(false, pumpB._activated);
 		assertEquals(false, gate._open);
@@ -83,6 +86,7 @@ public class FSMImplementationTest
 
 		uut.evaluate();
 
+		//StartingPumps
 		assertEquals(true, pumpA._activated);
 		assertEquals(true, pumpB._activated);
 		assertEquals(false, gate._open);
@@ -96,6 +100,7 @@ public class FSMImplementationTest
 
 		uut.evaluate();
 
+		//Dehumididifying
 		assertEquals(true, pumpA._activated);
 		assertEquals(true, pumpB._activated);
 		assertEquals(false, gate._open);
@@ -111,9 +116,10 @@ public class FSMImplementationTest
 
 		uut.evaluate();
 
+		//OpenGate
 		assertEquals(false, pumpA._activated);
 		assertEquals(false, pumpB._activated);
-		assertEquals(false, gate._open);
+		assertEquals(true, gate._open);
 		assertEquals(false, signals._lampAOn);
 		assertEquals(true, signals._lampBOn);
 		assertEquals(50, sensor._humidity, 0.1);
@@ -124,6 +130,7 @@ public class FSMImplementationTest
 
 		uut.evaluate();
 
+		//Monitoring
 		assertEquals(false, pumpA._activated);
 		assertEquals(false, pumpB._activated);
 		assertEquals(true, gate._open);
@@ -135,18 +142,6 @@ public class FSMImplementationTest
 		assertEquals(false, timer._expired);
 		assertEquals(5, timer._time, 0.1);
 
-		uut.evaluate();
-
-		assertEquals(false, pumpA._activated);
-		assertEquals(false, pumpB._activated);
-		assertEquals(true, gate._open);
-		assertEquals(false, signals._lampAOn);
-		assertEquals(false, signals._lampBOn);
-		assertEquals(50, sensor._humidity, 0.1);
-		assertEquals(false, humidifier._spraying);
-		assertEquals(false, operatorPanel._acknowledgement);
-		assertEquals(false, timer._expired);
-		assertEquals(5, timer._time, 0.1);
 	}
 
 }
