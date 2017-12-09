@@ -92,7 +92,7 @@ public class FSMImplementationTest
 		assertEquals(false, humidifier._spraying);
 		assertEquals(false, operatorPanel._acknowledgement);
 		assertEquals(false, timer._expired);
-		assertEquals(0, timer._time, 0.1);
+		assertEquals(5, timer._time, 0.1);
 
 		uut.evaluate();
 
@@ -105,7 +105,7 @@ public class FSMImplementationTest
 		assertEquals(false, humidifier._spraying);
 		assertEquals(false, operatorPanel._acknowledgement);
 		assertEquals(false, timer._expired);
-		assertEquals(0, timer._time, 0.1);
+		assertEquals(5, timer._time, 0.1);
 
 		sensor._humidity = 50;
 
@@ -120,7 +120,7 @@ public class FSMImplementationTest
 		assertEquals(false, humidifier._spraying);
 		assertEquals(false, operatorPanel._acknowledgement);
 		assertEquals(false, timer._expired);
-		assertEquals(0, timer._time, 0.1);
+		assertEquals(5, timer._time, 0.1);
 
 		uut.evaluate();
 
@@ -133,7 +133,7 @@ public class FSMImplementationTest
 		assertEquals(false, humidifier._spraying);
 		assertEquals(false, operatorPanel._acknowledgement);
 		assertEquals(false, timer._expired);
-		assertEquals(0, timer._time, 0.1);
+		assertEquals(5, timer._time, 0.1);
 
 		uut.evaluate();
 
@@ -146,7 +146,7 @@ public class FSMImplementationTest
 		assertEquals(false, humidifier._spraying);
 		assertEquals(false, operatorPanel._acknowledgement);
 		assertEquals(false, timer._expired);
-		assertEquals(0, timer._time, 0.1);
+		assertEquals(5, timer._time, 0.1);
 	}
 
 }
