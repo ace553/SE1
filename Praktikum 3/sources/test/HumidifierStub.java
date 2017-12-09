@@ -4,16 +4,21 @@ import boundaryclasses.IHumidifier;
 
 public class HumidifierStub implements IHumidifier {
 
+	boolean _spraying;
+	
+	public HumidifierStub()
+	{
+		_spraying = false;
+	}
+	
 	@Override
 	public void sendSprayOn() {
-		// TODO Auto-generated method stub
-
+		_spraying = true;
 	}
 
 	@Override
 	public void sendSprayOff() {
-		// TODO Auto-generated method stub
-
+		_spraying = false;
 	}
 
 }

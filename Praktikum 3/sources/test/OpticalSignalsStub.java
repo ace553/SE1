@@ -4,28 +4,35 @@ import boundaryclasses.IOpticalSignals;
 
 public class OpticalSignalsStub implements IOpticalSignals {
 
+	boolean _lampAOn;
+	boolean _lampBOn;
+	
+	
+	public OpticalSignalsStub()
+	{
+		_lampAOn = false;
+		_lampBOn = true;
+	}
+	
+	
 	@Override
 	public void switchLampAOn() {
-		// TODO Auto-generated method stub
-
+		_lampAOn = true;
 	}
 
 	@Override
 	public void switchLampAOff() {
-		// TODO Auto-generated method stub
-
+		_lampAOn = false;
 	}
 
 	@Override
 	public void switchLampBOn() {
-		// TODO Auto-generated method stub
-
+		_lampBOn = true;
 	}
 
 	@Override
 	public void switchLampBOff() {
-		// TODO Auto-generated method stub
-
+		_lampBOn = false;
 	}
 
 }

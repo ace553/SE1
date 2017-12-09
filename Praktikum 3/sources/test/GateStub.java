@@ -4,28 +4,31 @@ import boundaryclasses.IGate;
 
 public class GateStub implements IGate {
 
+	boolean _open;
+	
+	public GateStub()
+	{
+		_open = false;
+	}
+	
 	@Override
 	public void sendCloseGate() {
-		// TODO Auto-generated method stub
-
+		_open = false;
 	}
 
 	@Override
 	public void sendOpenGate() {
-		// TODO Auto-generated method stub
-
+		_open = true;
 	}
 
 	@Override
 	public boolean receivedGateClosed() {
-		// TODO Auto-generated method stub
-		return false;
+		return !_open;
 	}
 
 	@Override
 	public boolean receivedGateOpen() {
-		// TODO Auto-generated method stub
-		return false;
+		return _open;
 	}
 
 }

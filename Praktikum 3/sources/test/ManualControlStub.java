@@ -4,10 +4,16 @@ import boundaryclasses.IManualControl;
 
 public class ManualControlStub implements IManualControl {
 
+	boolean _acknowledgement;
+	
+	public ManualControlStub()
+	{
+		_acknowledgement = false;
+	}
+	
 	@Override
 	public boolean receivedAcknowledgement() {
-		// TODO Auto-generated method stub
-		return false;
+		return _acknowledgement;
 	}
 
 }

@@ -4,10 +4,16 @@ import boundaryclasses.IHumiditySensor;
 
 public class HumiditySensorStub implements IHumiditySensor {
 
+	double _humidity;
+	
+	public HumiditySensorStub()
+	{
+		_humidity = 50;
+	}
+	
 	@Override
 	public double getHumidity() {
-		// TODO Auto-generated method stub
-		return 0;
+		return _humidity;
 	}
 
 }

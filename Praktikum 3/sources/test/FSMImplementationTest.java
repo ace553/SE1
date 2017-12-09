@@ -27,6 +27,7 @@ public class FSMImplementationTest {
 	private HumiditySensorStub sensor;
 	private HumidifierStub humidifier;
 	private ManualControlStub operatorPanel;
+	private TimerStub timer;
 	private IFSM uut;
 
 	@Before
@@ -38,8 +39,9 @@ public class FSMImplementationTest {
 		sensor = new HumiditySensorStub();
 		humidifier = new HumidifierStub();
 		operatorPanel = new ManualControlStub();
+		timer = new TimerStub();
 		uut = new FSMImplementation(  pumpA,  pumpB,  gate,  signals,
-				humidifier,  sensor,  operatorPanel) ;
+				humidifier,  sensor,  operatorPanel, timer) ;
 	}
 	
 	@Test
