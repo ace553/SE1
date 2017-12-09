@@ -50,22 +50,26 @@ public class FSMImplementation implements IFSM
                     changeTo(FSMState.StartingPumps);
                 }
                 break;
-            case Dehudmitifying:
+            case Dehudmidifying:
                 if (this.sensor.getHumidity() < this.upperBound)
                 {
                     changeTo(FSMState.OpenGate);
                 }
                 break;
-            case Hudmitifying:
-                if (this.sensor.getHumidity() < this.lowerBound)
+            case Hudmidifying:
+                if (this.sensor.getHumidity() > this.lowerBound)
                 {
                     changeTo(FSMState.Monitoring);
                 }
                 break;
             case Monitoring:
-                if (this.sensor.getHumidity() > this.lowerBound)
+                if (this.sensor.getHumidity() < this.lowerBound)
                 {
-                    changeTo(FSMState.Hudmitifying);
+                    changeTo(FSMState.Hudmidifying);
+                }
+                else if(this.sensor.getHumidity() > this.upperBound)
+                {
+                    changeTo(FSMState.CloseGate);
                 }
                 break;
             case OpenGate:
@@ -87,7 +91,7 @@ public class FSMImplementation implements IFSM
 
                 if (pumpOkA && pumpOkB)
                 {
-                    changeTo(FSMState.Dehudmitifying);
+                    changeTo(FSMState.Dehudmidifying);
                 }
                 else if (this.timer.isTimerExpired())
                 {
@@ -125,11 +129,11 @@ public class FSMImplementation implements IFSM
             case CloseGate:
                 this.signals.switchLampBOff();
                 break;
-            case Dehudmitifying:
+            case Dehudmidifying:
                 this.pumpA.sendDeactivate();
                 this.pumpB.sendDeactivate();
                 break;
-            case Hudmitifying:
+            case Hudmidifying:
                 this.humidifier.sendSprayOff();
                 this.signals.switchLampAOff();
                 break;
@@ -163,10 +167,10 @@ public class FSMImplementation implements IFSM
                 this.signals.switchLampBOn();
                 this.gate.sendCloseGate();
                 break;
-            case Dehudmitifying:
+            case Dehudmidifying:
                 // Nothing
                 break;
-            case Hudmitifying:
+            case Hudmidifying:
                 this.signals.switchLampAOn();
                 this.humidifier.sendSprayOn();
                 break;
